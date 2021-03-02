@@ -12,3 +12,31 @@ sudo apt install --no-install-recommends git cmake ninja-build gperf \
   python3-dev python3-pip python3-setuptools python3-tk python3-wheel xz-utils file \
   make gcc gcc-multilib g++-multilib libsdl2-dev
 ```
+
+2. Verify cmake version is above **3.13.1** by entering the following command
+```
+cmake --version
+```
+If found a lower version update it.
+
+## Step 2: Get Zephyr and install Python dependencies
+1. Install **west**. west is Zephyrs meta-tool. 
+`pip3 install --user -U west`
+3. Make sure environment variables are set correctly
+```
+echo 'export PATH=~/.local/bin:"$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+4. Get zephyr source code:
+```
+west init ~/zephyrproject
+cd ~/zephyrproject
+west update
+```
+
+5. Export a Zephyr CMake package. This allows CMake to automatically load boilerplate code required for building Zephyr applications.
+
+`west zephyr-export`
+Zephyr’s scripts/requirements.txt file declares additional Python dependencies. Install them with pip3.
+
+pip3 install --user -r ~/zephyrproject/zephyr/scripts/requirements.txt
