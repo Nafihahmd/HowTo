@@ -35,8 +35,20 @@ west update
 ```
 
 5. Export a Zephyr CMake package. This allows CMake to automatically load boilerplate code required for building Zephyr applications.
+```
+west zephyr-export
+```
 
-`west zephyr-export`
-Zephyr’s scripts/requirements.txt file declares additional Python dependencies. Install them with pip3.
+6. Zephyr’s scripts/requirements.txt file declares additional Python dependencies. Install them with pip3.
 
+```
 pip3 install --user -r ~/zephyrproject/zephyr/scripts/requirements.txt
+```
+
+## Step 3 install Toolchain
+1. Goto nordic semi official website and download **nRF Command Line Tools**.
+2. Extract the .tar.gz file to a folder.
+3. Install NRFTools with deb package:
+```
+sudo dpkg -i --force-overwrite nRF-Command-Line-Tools_10_12_1_Linux-amd64.deb
+```
