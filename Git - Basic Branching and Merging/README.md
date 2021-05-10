@@ -17,7 +17,7 @@ git branch new-feature
 
 2. Create remote branch for new feature. 
 ```
-git branch new-feature
+git push origin new-feature
 ```
 
 3. Editing in the new branch  
