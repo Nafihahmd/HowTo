@@ -24,7 +24,7 @@ git branch new-feature
 	First change from mater branch to the newly created branch using `checkout` command.
 
 ```
-git checkout rm-ssml
+git checkout new-feature
 ```
 	Afetr adding/editing your required files stage and commit the changes.
 ```
@@ -34,19 +34,19 @@ git commit -m "<describe change here>"
  ```
  	Finally push it to remote branch
  ```
- git push origin rm-ssml
+ git push origin new-feature
  ```
 
  4. Merging branch
 Change to master branch first. 
 ```
 git checkout master
-git merge rm-ssml 
+git merge new-feature 
 git push origin master	#merging remote branch
 ```
 5. Removing branch
 This step assumes you have remote-tracking branches. Otherwise this this procedure will not work for remote branches. If you have followed the tutorial from step 1 just ignore above two sentences.
 ```
-git branch -d rm-ssml	#remove local branch
-git push origin -d rm-ssml	#remove remote branch
+git branch -d new-feature	#remove local branch
+git push origin -d new-feature	#remove remote branch
 ```
