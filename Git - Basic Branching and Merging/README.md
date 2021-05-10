@@ -10,7 +10,7 @@ Suppose you are working with a large project and want to test adding a new featu
 - Removing local and remote branches
 
 ## Procedure
-1. Create local branch for new feature. Use a relevant branch name, eg., "new-feature"
+1. Create a local branch for adding new feature. Use a relevant branch name, eg., "new-feature"
 ```
 git branch new-feature
 ```
@@ -21,7 +21,7 @@ git push origin new-feature
 ```
 
 3. Editing in the new branch  
-	First change from mater branch to the newly created branch using `checkout` command.
+	First change from master branch to the newly created branch using `checkout` command.
 
 ```
 git checkout new-feature
@@ -30,7 +30,7 @@ git checkout new-feature
 ```
 git add *	#Staging changes 
 git status
-git commit -m "<describe change here>"
+git commit -m "<describe changes made here>"
  ```
  	Finally push it to remote branch
  ```
