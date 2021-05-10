@@ -26,7 +26,7 @@ git push origin new-feature
 ```
 git checkout new-feature
 ```
-	Afetr adding/editing your required files stage and commit the changes.
+After adding/editing your required files stage and commit the changes.
 ```
 git add *	#Staging changes 
 git status
